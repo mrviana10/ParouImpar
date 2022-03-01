@@ -44,55 +44,55 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/zeroBt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginHorizontal="5dp"
-            android:text="@string/zero"/>
+            android:layout_weight="1"
+            android:text="@string/zero" />
 
         <Button
             android:id="@+id/umBt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginHorizontal="5dp"
-            android:text="@string/um"/>
+            android:layout_weight="1"
+            android:text="@string/um" />
 
         <Button
             android:id="@+id/doisBt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginHorizontal="5dp"
-            android:text="@string/dois"/>
+            android:layout_weight="1"
+            android:text="@string/dois" />
 
         <Button
             android:id="@+id/tresBt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginHorizontal="5dp"
-            android:text="@string/tres"/>
+            android:layout_weight="1"
+            android:text="@string/tres" />
 
         <Button
             android:id="@+id/quatroBt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginHorizontal="5dp"
-            android:text="@string/quatro"/>
+            android:layout_weight="1"
+            android:text="@string/quatro" />
 
         <Button
             android:id="@+id/cincoBt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginHorizontal="5dp"
-            android:text="@string/cinco"/>
+            android:layout_weight="1"
+            android:text="@string/cinco" />
 
     </LinearLayout>
 
