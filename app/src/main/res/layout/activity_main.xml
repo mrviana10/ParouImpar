@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/selecione_uma_op_o" />
+        android:text="@string/selecione_uma_opcao" />
 
     <RadioGroup
         android:id="@+id/opcaoRg"
@@ -102,7 +102,7 @@
         android:text="@string/resultado" />
 
     <TextView
-        android:id="@+id/resltadoTv"
+        android:id="@+id/resultadoTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
