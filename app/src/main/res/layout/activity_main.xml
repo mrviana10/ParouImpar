@@ -46,50 +46,62 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
+        <ImageButton
             android:id="@+id/zeroBt"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="64dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/zero"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
             android:text="@string/zero" />
 
-        <Button
+        <ImageButton
             android:id="@+id/umBt"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="64dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/one"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
             android:text="@string/um" />
 
-        <Button
+        <ImageButton
             android:id="@+id/doisBt"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="64dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/two"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
             android:text="@string/dois" />
 
-        <Button
+        <ImageButton
             android:id="@+id/tresBt"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="64dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/three"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
             android:text="@string/tres" />
 
-        <Button
+        <ImageButton
             android:id="@+id/quatroBt"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="64dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/four"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
             android:text="@string/quatro" />
 
-        <Button
+        <ImageButton
             android:id="@+id/cincoBt"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="64dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/five"
             android:layout_marginHorizontal="5dp"
             android:layout_weight="1"
             android:text="@string/cinco" />

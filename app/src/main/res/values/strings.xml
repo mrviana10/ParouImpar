@@ -10,6 +10,6 @@
     <string name="cinco">5</string>
     <string name="resultado">Resultado:</string>
     <string name="resultado2">Resultado2</string>
-    <string name="selecione_uma_opcao">Selecione uma Opção:</string>
-    <string name="selecione_sua_jogada">Selecione sua jogada:</string>
+    <string name="selecione_uma_opcao">Selecione uma Opção: </string>
+    <string name="selecione_sua_jogada">Selecione sua jogada: </string>
 </resources>
