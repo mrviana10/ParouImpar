@@ -11,38 +11,25 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+import br.edu.ifsp.scl.sdm.parouimpar.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //Referência para objetos de UI no leiaute
-    private RadioGroup opcaoRG;
-    private Button zeroBt;
-    private Button umBt;
-    private Button doisBt;
-    private Button tresBt;
-    private Button quatroBt;
-    private Button cincoBt;
-    private TextView resultadoTv;
+    private ActivityMainBinding activityMainBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        activityMainBinding = ActivityMainBinding.inflate(getLayoutInflater());
 
-        opcaoRG = findViewById(R.id.opcaoRg);
-        zeroBt =findViewById(R.id.zeroBt);
-        umBt = findViewById(R.id.umBt);
-        doisBt = findViewById(R.id.doisBt);
-        tresBt = findViewById(R.id.tresBt);
-        quatroBt = findViewById(R.id.quatroBt);
-        cincoBt = findViewById(R.id.cincoBt);
-        resultadoTv = findViewById(R.id.resultadoTv);
+        setContentView(activityMainBinding.getRoot());
 
-        zeroBt.setOnClickListener(this);
-        umBt.setOnClickListener(this);
-        doisBt.setOnClickListener(this);
-        tresBt.setOnClickListener(this);
-        quatroBt.setOnClickListener(this);
-        cincoBt.setOnClickListener(this);
-
+        activityMainBinding.zeroBt.setOnClickListener(this);
+        activityMainBinding.umBt.setOnClickListener(this);
+        activityMainBinding.doisBt.setOnClickListener(this);
+        activityMainBinding.tresBt.setOnClickListener(this);
+        activityMainBinding.quatroBt.setOnClickListener(this);
+        activityMainBinding.cincoBt.setOnClickListener(this);
     }
 
     @Override
@@ -76,6 +63,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Random random = new Random(System.currentTimeMillis());
         int jogadaComputador = random.nextInt(6);
 
+        // Setando imagem da jogada do computador
+        int imagemJogadaComputadoId = -1;
+        switch (jogadaComputador) {
+            case 0:
+                imagemJogadaComputadoId = R.mipmap.zero;
+                break;
+            case 1:
+                imagemJogadaComputadoId = R.mipmap.one;
+                break;
+            case 2:
+                imagemJogadaComputadoId = R.mipmap.two;
+                break;
+            case 3:
+                imagemJogadaComputadoId = R.mipmap.three;
+                break;
+            case 4:
+                imagemJogadaComputadoId = R.mipmap.four;
+                break;
+            case 5:
+                imagemJogadaComputadoId = R.mipmap.five;
+                break;
+            default:
+                break;
+        }
+
+        activityMainBinding.jogadaComputadorIv.setImageResource(imagemJogadaComputadoId);
+
         StringBuilder resultadoSb = new StringBuilder();
         resultadoSb.append("Sua jogada: ");
         resultadoSb.append(jogada);
@@ -84,13 +98,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resultadoSb.append(jogadaComputador);
         resultadoSb.append(", ");
 
-        if (opcaoRG.getCheckedRadioButtonId() == R.id.parRB){
+        if (activityMainBinding.opcaoRg.getCheckedRadioButtonId() == R.id.parRB){
             resultadoSb.append((jogada + jogadaComputador) % 2 == 0? "Você GANHOU!" : "Você PERDEU!!");
         }
         else {
             resultadoSb.append((jogada + jogadaComputador) % 2 == 0? "Você Perdeu!" : "Você GANHOU!!");
         }
 
-        resultadoTv.setText(resultadoSb.toString());
+        activityMainBinding.resultadoTv.setText(resultadoSb.toString());
     }
 }
