@@ -11,37 +11,43 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+import br.edu.ifsp.scl.sdm.parouimpar.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //Referência para objetos de UI no leiaute
-    private RadioGroup opcaoRG;
-    private Button zeroBt;
-    private Button umBt;
-    private Button doisBt;
-    private Button tresBt;
-    private Button quatroBt;
-    private Button cincoBt;
-    private TextView resultadoTv;
+    private ActivityMainBinding activityMainBinding;
+
+    //private RadioGroup opcaoRG;
+    //private Button zeroBt;
+    //private Button umBt;
+    //private Button doisBt;
+    //private Button tresBt;
+    //private Button quatroBt;
+    //private Button cincoBt;
+    //private TextView resultadoTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        activityMainBinding = ActivityMainBinding.inflate(getLayoutInflater());
 
-        opcaoRG = findViewById(R.id.opcaoRg);
-        zeroBt =findViewById(R.id.zeroBt);
-        umBt = findViewById(R.id.umBt);
-        doisBt = findViewById(R.id.doisBt);
-        tresBt = findViewById(R.id.tresBt);
-        quatroBt = findViewById(R.id.quatroBt);
-        cincoBt = findViewById(R.id.cincoBt);
-        resultadoTv = findViewById(R.id.resultadoTv);
+        setContentView(activityMainBinding.getRoot());
 
-        zeroBt.setOnClickListener(this);
-        umBt.setOnClickListener(this);
-        doisBt.setOnClickListener(this);
-        tresBt.setOnClickListener(this);
-        quatroBt.setOnClickListener(this);
-        cincoBt.setOnClickListener(this);
+        //opcaoRG = findViewById(R.id.opcaoRg);
+        //zeroBt =findViewById(R.id.zeroBt);
+        //umBt = findViewById(R.id.umBt);
+        //doisBt = findViewById(R.id.doisBt);
+        //tresBt = findViewById(R.id.tresBt);
+        //quatroBt = findViewById(R.id.quatroBt);
+        //cincoBt = findViewById(R.id.cincoBt);
+        //resultadoTv = findViewById(R.id.resultadoTv);
+
+        activityMainBinding.zeroBt.setOnClickListener(this);
+        activityMainBinding.umBt.setOnClickListener(this);
+        activityMainBinding.doisBt.setOnClickListener(this);
+        activityMainBinding.tresBt.setOnClickListener(this);
+        activityMainBinding.quatroBt.setOnClickListener(this);
+        activityMainBinding.cincoBt.setOnClickListener(this);
 
     }
 
@@ -84,13 +90,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resultadoSb.append(jogadaComputador);
         resultadoSb.append(", ");
 
-        if (opcaoRG.getCheckedRadioButtonId() == R.id.parRB){
+        if (activityMainBinding.opcaoRg.getCheckedRadioButtonId() == R.id.parRB){
             resultadoSb.append((jogada + jogadaComputador) % 2 == 0? "Você GANHOU!" : "Você PERDEU!!");
         }
         else {
             resultadoSb.append((jogada + jogadaComputador) % 2 == 0? "Você Perdeu!" : "Você GANHOU!!");
         }
 
-        resultadoTv.setText(resultadoSb.toString());
+        activityMainBinding.resultadoTv.setText(resultadoSb.toString());
     }
 }
