@@ -1,13 +1,9 @@
 package br.edu.ifsp.scl.sdm.parouimpar;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
@@ -99,10 +95,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resultadoSb.append(", ");
 
         if (activityMainBinding.opcaoRg.getCheckedRadioButtonId() == R.id.parRB){
-            resultadoSb.append((jogada + jogadaComputador) % 2 == 0? "Você GANHOU!" : "Você PERDEU!!");
+            resultadoSb.append((jogada + jogadaComputador) % 2 == 0? "Você GANHOOOOU!" : "Você PERDEU!!");
         }
         else {
-            resultadoSb.append((jogada + jogadaComputador) % 2 == 0? "Você Perdeu!" : "Você GANHOU!!");
+            resultadoSb.append((jogada + jogadaComputador) % 2 == 0? "Você Perdeuuuu!" : "Você GANHOU!!");
         }
 
         activityMainBinding.resultadoTv.setText(resultadoSb.toString());
